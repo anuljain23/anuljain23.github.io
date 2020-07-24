@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+.header-section{
+  height: 100vh;
+  width:auto;
+  background-image:linear-gradient(rgba(7, 39, 179, 0.644),rgba(112, 34, 236, 0.692)), url(../images/header-section.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.nav{
+  padding-top: 30px;
+  padding-right: 25px;
+}
+
+.nav-item a{
+  font-size: 180%;
+  color: white;
+  transition: border-bottom 0.2s;
+}
+
+.nav-link:hover{
+    font-size: 190%;
+    color:white;
+    border-bottom: solid 2px rgb(13, 243, 243);
+}
+
+#name{
+  font-family: 'Grenze Gotisch', cursive;
+  font-size: 500%;
+  color: white;
+  text-align: center;
+  margin-top: 350px;
+}
+
+.connect{
+  padding: 210px;
+  background-size: cover;
+  background-image:linear-gradient(rgba(4, 25, 82, 0.7),rgba(20, 17, 167, 0.7)), url(../images/connect.jpg);
+}
+
+
+.footer-section{
+  background-color: #31414E;
+  text-align: center;
+  font-size: 120%;
+  padding: 30px;
+}
+
+.footer-section p{
+  margin-top: 15px;
+  color: white;
+}
