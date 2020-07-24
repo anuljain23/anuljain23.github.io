@@ -59,9 +59,51 @@
 }
 
 #about p{
-  margin-top: 50px
   text-align: inherit;
   font-size: 150%;
+}
+
+#work{
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background-image:linear-gradient(rgba(23, 49, 68, 1),rgba(23, 49, 68, 0.3));
+  color: white;
+  text-align: center;
+}
+
+#work h1{
+  padding-bottom: 30px;
+}
+
+.skill-row{
+  color: white;
+  text-align: center;
+}
+
+.skill-list li{
+  display: inline-block;
+  border:solid 1px #dae1e7;
+  color:#142850;
+  background-color: white;
+  border-radius: 100%;
+  padding: 10px 20px;
+  margin: 5px;
+}
+
+.skill-item{
+  padding: 40px 20px;
+}
+
+.skill-item img{
+  display: inline-block;
+  width:100%;
+  height: 300px;
+  border-radius: 20%;
+  margin: 40px auto;
+}
+
+#work ul{
+  list-style: none;
 }
 
 #connect{
@@ -71,7 +113,7 @@
   color: white;
   background-position: center;
   background-size: cover;
-  background-image:linear-gradient(rgba(45, 53, 67, 0.79),rgba(45, 53, 67, 0.45)), url(../images/connect.jpg);
+  background-image:linear-gradient(rgba(45, 53, 67, 0.99),rgba(45, 53, 67, 0.45)), url(../images/connect.jpg);
 }
 
 #connect h1{
@@ -83,9 +125,17 @@
   list-style: none;
 }
 
+.text{
+  font-size: 215%;
+}
+
 #connect .connect-link{
   font-size: 70%;
   margin: 20px;
+}
+
+#connect .connect-link i{
+  padding-right: 12px;
 }
 
 #connect .connect-link a{
