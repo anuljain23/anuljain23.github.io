@@ -1,14 +1,14 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Playfair Display', serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
 }
 
 .header-section{
   height: 100vh;
   width:auto;
-  background-image:linear-gradient(rgba(7, 39, 179, 0.644),rgba(112, 34, 236, 0.692)), url(../images/header-section.jpg);
+  background-image:linear-gradient(rgba(45, 53, 67, 0.79),rgba(45, 53, 67, 0.45)), url(../images/header-section.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -38,12 +38,63 @@
   margin-top: 350px;
 }
 
-.connect{
-  padding: 210px;
+#about{
+  justify-content: center;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background-position: center;
   background-size: cover;
-  background-image:linear-gradient(rgba(4, 25, 82, 0.7),rgba(20, 17, 167, 0.7)), url(../images/connect.jpg);
+  color: white;
+  background-color: #2d3543
 }
 
+#about h1{
+  font-size: 350%;
+  padding-bottom: 50px;
+}
+
+#about img{
+  margin-top: -80px;
+  margin-left: 50px;
+  float: left;
+  margin-right: 40px;
+  border-radius: 100%;
+}
+
+#about p{
+  padding: 30px 40px 60px 40px;
+  margin-top:auto;
+  font-size: 150%;
+}
+
+#connect{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  background-image:linear-gradient(rgba(45, 53, 67, 0.79),rgba(45, 53, 67, 0.45)), url(../images/connect.jpg);
+}
+
+#connect h1{
+  font-size: 350%;
+  padding-bottom: 50px;
+}
+
+#connect ul{
+  list-style: none;
+}
+
+#connect .connect-link{
+  font-size: 70%;
+  margin: 20px;
+}
+
+#connect .connect-link a{
+  color: white;
+}
 
 .footer-section{
   background-color: #31414E;
