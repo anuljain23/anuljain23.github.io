@@ -86,7 +86,7 @@
   border:solid 1px #dae1e7;
   color:#142850;
   background-color: white;
-  border-radius: 100%;
+  border-radius: 30%;
   padding: 10px 20px;
   margin: 5px;
 }
@@ -105,6 +105,65 @@
 
 #work ul{
   list-style: none;
+}
+
+#feedback{
+  align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white;
+  opacity: 0.85;
+  background-color: #252D40;
+  text-decoration: underline;
+}
+
+input[type=text], select, textarea{
+  font-size: 110%;
+  width: 100%;
+  height: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+#feedback h1{
+  text-align: center;
+  font-size: 350%;
+  padding-bottom: 50px;
+}
+
+#feedback form{
+  width: 80%;
+  margin: 0 auto;
+}
+
+label {
+  font-size: 120%;
+  padding: 10px 10px 10px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  margin-top: 70px;
+  width: 30%;
+  font-weight: bold;
+  font-size: 120%;
+  background-color: #D3D4DE;
+  color: #42424A;
+  padding: 10px 15px;
+  border: none;
+  float: right;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 #connect{
