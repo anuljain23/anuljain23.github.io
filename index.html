@@ -136,13 +136,13 @@
           <h1>Feedback</h1>
         </div>
         <div class="container">
-          <form id="feedback-form">
+          <form id="feedback-form" method="post">
             <div class="row">
               <div class="col-lg-4 col-sm-12">
                 <label for="form-name">Name</label>
               </div>
               <div class="col-lg-8 col-sm-12">
-                <input type="text" id="form-name" name="form-name" placeholder="Your name..">
+                <input type="text" id="form-name" name="form-name" placeholder="Your name.." required>
               </div>
             </div>
             <div class="row">
@@ -158,7 +158,7 @@
                 <label for="message">Message</label>
               </div>
               <div class="col-lg-8 col-sm-12">
-                <textarea id="message" name="message" placeholder="Write something.." style="height:130%"></textarea>
+                <textarea id="message" name="message" placeholder="Write something.." style="height:130%" required></textarea>
               </div>
             </div>
             <div class="row align-items-center justify-content-center">
@@ -200,7 +200,16 @@
   <script type="text/javascript">
 
     document.getElementById("submit-button").onclick = function(){
-      alert("Thank you very much for your feeedback");
+      var message = "";
+      var name = "";
+      message = document.getElementById("message").value;
+      name = document.getElementById("form-name").value;
+      if(name == "" || message == ""){
+        alert("Please provide your name and feedback");
+      }
+      else{
+        alert("Thank you for your feedback " + name);
+      }
     }
 
   </script>
