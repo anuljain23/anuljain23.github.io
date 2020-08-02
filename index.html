@@ -219,6 +219,8 @@
     <div class="footer-section">
       <p>&copy Anul Jain 2020</p>
     </div>
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -228,30 +230,28 @@
         easing: 'ease-in-out-sine'
       });
     </script>
+
   </body>
 
   <script type="text/javascript">
 
-    document.getElementById("submit-button").onclick = function(){
-      var message = "";
-      var name = "";
-      message = document.getElementById("message").value;
-      name = document.getElementById("form-name").value;
-      if(name == "" || message == ""){
-        alert("Please provide your name and feedback");
-      }
-      else{
-        alert("Thank you for your feedback " + name);
-      }
-    }
+    // document.getElementById("submit-button").onclick = function(){
+    //   var message = "";
+    //   var name = "";
+    //   message = document.getElementById("message").value;
+    //   name = document.getElementById("form-name").value;
+    //   if(name == "" || message == ""){
+    //     alert("Please provide your name and feedback");
+    //   }
+    //   else{
+    //     alert("Thank you for your feedback " + name);
+    //   }
+    // }
 
     $(document).on('click',function(){
-     $('.collapse').collapse('hide');
+     $('.collapse').collapse("hide");
     });
 
-  </script>
-  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js">
-    AOS.init();
   </script>
 
 </html>
