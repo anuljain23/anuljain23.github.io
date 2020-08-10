@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0091)https://www.payumoney.com/payments/guestcheckout/#/success/523A975ECA04687DD04C87E8E9899121 -->
+<html xmlns:ng="http://angularjs.org/" id="ng-app" ng-app="GuestCheckout" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+<title>PayUMoney Payment Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link href="./PayUMoney Payment Page_files/index.php" rel="stylesheet" type="text/css">
+<link href="https://file.payumoney.com/images/favicon_index.ico" rel="shortcut icon" type="image/x-icon" sizes="16x16">
+<script type="text/javascript" src="./PayUMoney Payment Page_files/guestcheckout.js.download"></script>
+
+<!-- <script async="true" type="text/javascript">
+ var _reqM = [//@wiki sequence is neccessary.
+   'A/angular.min.js',
+   'A/angular-route.min.js',
+   'A/angular-resource.min.js',
+   'A/angular-cookies.min.js',
+   'A/storage.js',
+   'Application/bootstrap.js',
+   'Application/models/paymentModel.js', // Payment Model
+   'Application/models/authModel.js', // Payment Model
+   'Application/service/cookiePlaneService.js', // login Service
+   'payments/guestcheckout/route.js', // Route for App
+   'Application/controllers/payment/guestcheckout/guestCheckoutHandleController.js',
+   'Application/directives/ngc-popuphandler.js',
+   'Application/service/trackEventService.js',
+   'Application/service/loginService.js'
+ ];
+
+ (function(document) {
+    var debug = false;
+    var _inject = function (str, src, async) {
+      var ng = document.createElement('script'),
+      scripts = document.getElementsByTagName('script');
+      ng.type = 'text/javascript'; ng.src = src + str; if(async) ng.async = true;
+      var s = scripts[scripts.length-1]; s.parentNode.insertBefore(ng, s.nextSibling);
+    }
+
+    if(debug) {for(key in _reqM) { _inject(_reqM[key].replace('.min', ''), '/', false); } return; }
+    _inject(_reqM.join(','), '//ux.payumoney.com/index.php?v='+Math.round(+new Date()/1000)+'&f=', true);
+  })(window.document);
+</script> -->
+</head>
+<body>
+ <!-- ngView: undefined --><ng:view class="ng-scope"><script type="text/javascript" class="ng-scope">
+	try {
+		window._vis_opt_queue = window._vis_opt_queue || [];
+		window._vis_opt_queue.push(function() {_vis_opt_revenue_conversion("1");});
+	}
+	catch(err) {
+		//Do Nothing
+	}
+</script>
+<!-- ngIf: paymentInfo --><div class="layout ng-scope" ng-if="paymentInfo">
+	<div class="error_cntnr">
+		<div class="error_blckcheckout">
+			<div class="logo_part"><h1 class="logo"><a href="https://www.payumoney.com/payments/guestcheckout/#"></a></h1></div>
+			<div class="grey_areascheckout">
+				<span class="arrow_bg"></span>
+				<p class="statustext"><span class="sicon"></span><br>Your Payment is Successful</p>
+				<!-- ngIf: paymentInfo && paymentInfo.onSuccessMsg -->
+			</div>
+			<div>
+		    <div class="gst_chk_sccs_flr">
+				<div class="paymentdetails">
+					<span class="Paymenttext">Payment details</span>
+					<table class="paymenttable">
+						<colgroup class="paymenttabletd"></colgroup>
+						<colgroup class="paymenttabletd"></colgroup>
+						<tbody><tr>
+							<td class="paymenttabletd">Merchant Name </td><td class="paymenttabletd ng-binding">SIR M VISVESVARAYA INSTITUTE OF TECHNOLOGY</td>
+						</tr>    
+						<tr>
+							<td class="paymenttabletd">Payment ID</td><td class="paymenttabletd ng-binding">342886347</td>
+						</tr>  
+						<tr>
+							<td class="paymenttabletd">Amount</td>
+							<td class="paymenttabletd">
+								<span class="WebRupee">Rs.</span>
+								<span ng-bind="paymentInfo.totalAmount" class="ng-binding">300</span>
+							</td>
+						</tr> 
+						<!-- ngIf: paymentInfo.cashbackAccumulated.amount -->
+						<tr>
+							<td class="paymenttabletd">Status</td><td class="paymenttabletd">Successful</td>
+						</tr>   		  
+					</tbody></table>
+				</div>
+				<!--<div class="line"></div>-->
+				<!-- show below div only if we have to show create account option to user -->
+				<!--<div ng-if="showSignupInfo" class="paymentdetailscontent"><span class="Paymentcontents"> To track all your future payments we suggest you to create an account with us.</span>						  
+					<table class="paymentdetails1">
+						<tr>
+							<td align="center"><a class="BtnPayUMoney" target="_blank" ng-href="/?fromGuestCheckout=true&guestEmail={{paymentInfo.userEmail}}&paymentId={{paymentInfo.paymentId}}">Create PayUMoney Account</a></td>
+						</tr>
+						<tr>
+							<td class="PaymentText">&nbsp;</td>
+						</tr>
+						<tr>
+							<td class="Paymentheading">Benefits of using PayUMoney Dashboard</td>
+						</tr>
+						<tr>
+							<td  class="PaymentText">
+								<ul><li>Keeps all your transactions and receipts in a single place.</li>
+									<li>Pay by any payment method of your choice.</li>
+									<li>One click store card checkout.</li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</div>-->
+
+				<!-- show below only if we have to show reset pass to user -->
+				<!-- ngIf: showResetPass -->
+
+			</div>				
+			</div>
+		</div>
+	</div>
+	<p class="copyright">Copyright © 2017 PayUMoney. All rights reserved.</p>
+</div><!-- end ngIf: paymentInfo --></ng:view>
+
+</body></html>
