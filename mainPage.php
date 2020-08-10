@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Anul Jain</title>
-  </head>
-  <body>
-    <h1>Welcome</h1>
-    <a href="mainPage.php">Cilck here to visit!!!</a>
-  </body>
-</html>
-
-
-<!-- <?php
+<?php
 
   $error = "";
   $successMessage = "";
@@ -106,7 +93,7 @@
             <a class="nav-link" href="#connect">Connect</a>
           </li>
         </ul> -->
-        <!-- <h1 data-aos="zoom-in" data-aos-delay="200" id="name">Anul Jain</h1>
+        <h1 data-aos="zoom-in" data-aos-delay="200" id="name">Anul Jain</h1>
       </header>
     </div>
 
@@ -323,4 +310,4 @@
 
   </script>
 
-</html> -->
+</html>
