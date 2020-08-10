@@ -1,3 +1,37 @@
+<?php
+
+  $error = "";
+  $successMessage = "";
+  if($_POST){
+    if(!$_POST["form-name"]){
+      $error .= "Name field can not be empty.<br>";
+    }
+    if(!$_POST["email"]){
+      $error .= "Your email is required.<br>";
+    }
+    if(!$_POST["message"]){
+      $error .= "Message field is required.<br>";
+    }
+    if($_POST["email"] && filter_var($_POST["email"], FILTER_VALIDATION_EMAIL) === false){
+      $error .= "The entered email is not valid.<br>";
+    }
+    if($error!=""){
+      $error = '<div class="alert alert-danger" data-aos="fade-down" data-aos-delay="300" role="alert"><p><strong>There were error(s) in your form:</strong></p>' . error . '</div>';
+    }else{
+      $emailTo = "anuljain23@gmail.com";
+      $subject = "Feedback to your website";
+      $content = $_POST["message"];
+      $headers = "From: ".$_POST["email"];
+      if(mail($emailTo, $subject, $content, $headers)){
+        $successMessage = '<div class="alert alert-success" data-aos="fade-down" data-aos-delay="300" role="alert"><p>Your message was sent successfully.<strong>Thank You for your feedback!!!</strong></p></div>';
+      }else{
+        $error = '<div class="alert alert-danger" data-aos="fade-down" data-aos-delay="300" role="alert"><p>Your message couldn\'t be sent. <strong>Please try again later!</strong></p></div>';
+      }
+    }
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -17,7 +51,9 @@
 
   <body>
 
-    <div id="loading"></div>
+    <div class="row">
+      <div id="loading" class="col-sm-12 col-lg-12"></div>
+    </div>
 
     <div id="main-navbar">
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-color float-right">
@@ -32,9 +68,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#work">Work</a>
             </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" href="#feedback">Feedback</a>
-            </li> -->
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="#connect">Connect</a>
             </li>
@@ -156,35 +192,39 @@
       </div>
     </div>
 
-    <!-- <div id="feedback">
+    <div id="feedback">
       <div class="container">
         <div class="form-heading">
           <h1>Feedback</h1>
         </div>
         <div class="container">
+          <div id="error">
+            <? echo $error.$successMessage; ?>
+          </div>
           <form id="feedback-form" method="post" action="#feedback">
             <div class="row">
-              <div class="col-lg-4 col-sm-12">
+              <div class="col-lg-4 col-sm-12 form-group">
                 <label for="form-name">Name</label>
               </div>
-              <div class="col-lg-8 col-sm-12">
-                <input type="text" id="form-name" name="form-name" placeholder="Your name.." required>
+              <div class="col-lg-8 col-sm-12 form-group">
+                <input type="text" id="form-name" name="name" placeholder="Your name...">
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-4 col-sm-12">
-                <label for="contact">Contact Number</label>
+              <div class="col-lg-4 col-sm-12 form-group">
+                <label for="email">E-Mail</label>
               </div>
-              <div class="col-lg-8 col-sm-12">
-                <input type="text" id="contact" name="contact" placeholder="Your number">
+              <div class="col-lg-8 col-sm-12 form-group">
+                <input type="email" id="email" class="form-control" name="email" placeholder="example@email.com">
+                <p id="mutedText" class="form-text">We'll never share your email with anyone else.</p>
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-4 col-sm-12">
+              <div class="col-lg-4 col-sm-12 form-group">
                 <label for="message">Message</label>
               </div>
-              <div class="col-lg-8 col-sm-12">
-                <textarea id="message" name="message" placeholder="Write something.." style="height:130%" required></textarea>
+              <div class="col-lg-8 col-sm-12 form-group">
+                <textarea id="message" name="message" placeholder="Write something..." rows="4"></textarea>
               </div>
             </div>
             <div class="row align-items-center justify-content-center">
@@ -193,7 +233,7 @@
           </form>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <div id="connect">
       <div class="container">
@@ -235,18 +275,6 @@
 
   <script type="text/javascript">
 
-    // document.getElementById("submit-button").onclick = function(){
-    //   var message = "";
-    //   var name = "";
-    //   message = document.getElementById("message").value;
-    //   name = document.getElementById("form-name").value;
-    //   if(name == "" || message == ""){
-    //     alert("Please provide your name and feedback");
-    //   }
-    //   else{
-    //     alert("Thank you for your feedback " + name);
-    //   }
-    // }
     document.onreadystatechange = function() {
       if (document.readyState !== "complete") {
           document.querySelector("body").style.visibility = "hidden";
@@ -260,6 +288,25 @@
     $(document).on('click',function(){
      $('.collapse').collapse("hide");
     });
+
+    $("form").submit(function(e) {
+             var error = "";
+             if ($("#form-name").val() == "") {
+                 error += "The name field is required.<br>"
+             }
+             if ($("#email").val() == "") {
+                 error += "The email field is required.<br>"
+             }
+             if ($("#message").val() == "") {
+                 error += "The message field is required.<br>"
+             }
+             if (error != "") {
+                $("#error").html('<div class="alert alert-danger" data-aos="fade-down" data-aos-delay="300" role="alert"><p><strong>There were error(s) in your form:</strong></p>' + error + '</div>');
+                 return false;
+             } else {
+                 return true;
+             }
+         })
 
   </script>
 
